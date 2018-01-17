@@ -69,7 +69,7 @@ class DataBase:
     
     def get_all_records(self):
         self.__connect_to_db(self.name_db)
-        sql_stmt = '''SELECT light.date, light.lux, hum.hum, temp.temp
+        sql_stmt = '''SELECT light.date, light.lux, hum.hum, temp.temp, temp.id
                       FROM main.light light, main.humidity hum, main.temperature temp
                       WHERE light.id = hum.id AND light.id = temp.id'''
         self.cursor_db.execute(sql_stmt)

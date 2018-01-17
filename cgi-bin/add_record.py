@@ -37,4 +37,4 @@ temp = html.escape(temp)
 if lux != '' and hum != '' and temp != '':
     wall.add_record(lux, hum, temp)
     print('Content-type: text/html\n')
-    print(pattern.format(title=header, content="Added", notifications=notific))
+    # print("")
