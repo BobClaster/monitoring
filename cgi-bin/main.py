@@ -58,19 +58,19 @@ out ="""
         <table>
         
         <tr>
-            <td><h2>Дата та час</h2></td>
-            <td><h2>Освітленість</h2></td>
-            <td><h2>Вологість</h2></td>
-            <td><h2>Температура</h2></td>
-            <td><h2>Знищити</h2></td>
+            <td align='center'><h2>Дата та час</h2></td>
+            <td align='center'><h2>Освітленість</h2></td>
+            <td align='center'><h2>Вологість</h2></td>
+            <td align='center'><h2>Температура</h2></td>
+            <td align='center'><h2>Знищити</h2></td>
         </tr>
         """
 for article in articles:
     out += '<tr>'
-    out += "<td><h3>" + str(article[0]) + "</h3></td>"
-    out += "<td><h3>" + str(article[1]) + "</h3></td>"
-    out += "<td><h3>" + str(article[2]) + "</h3></td>"
-    out += "<td><h3>" + str(article[3]) + "</h3></td>"
+    out += "<td align='center'><h3>" + str(article[0]) + "</h3></td>"
+    out += "<td align='center'><h3>" + str(article[1]) + "</h3></td>"
+    out += "<td align='center'><h3>" + str(article[2]) + "</h3></td>"
+    out += "<td align='center'><h3>" + str(article[3]) + "</h3></td>"
     out += "<td style='width: 100px;'>"
     # out += "<a href='/cgi-bin/edit_operator.py?id=" + str(article[0]) + "&operator=" + str(article[1] + "&example=" + article[2] + "&desc=" + article[3] + "'><img src='../html/img/edit.png' style='width: 25px; padding: 4px;'></a>"
     # out += "<a href=''><img src='../html/img/copy.png' style='width: 25px; padding: 4px;'></a>"
