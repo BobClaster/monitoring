@@ -8,9 +8,9 @@ import os
 import re
 
 
-from engine import Session
+from engine import DataBase
 
-wall = Session()
+wall = DataBase()
 
 ##########################################################################
 ##                                FORMS                                 ##
@@ -23,18 +23,21 @@ out = ''
 
 form = cgi.FieldStorage()
 #    ADD OPERATOR
-lux = form.getfirst("lux", "")
-lux = html.escape(lux)
+volt = form.getfirst("v", "")
+volt = html.escape(volt)
 
-hum = form.getfirst("hum", "")
-hum = html.escape(hum)
+amper = form.getfirst("a", "")
+amper = html.escape(amper)
 
-temp = form.getfirst("temp", "")
-temp = html.escape(temp)
+watt = form.getfirst("w", "")
+watt = html.escape(watt)
+
+watt_hour = form.getfirst("wh", "")
+watt_hour = html.escape(watt_hour)
 
 
 
-if lux != '' and hum != '' and temp != '':
-    wall.add_record(lux, hum, temp)
+if volt != '' and amper != '' and watt != '' and watt_hour != '':
+    wall.add_record(volt, amper, watt, watt_hour)
     print('Content-type: text/html\n')
     # print("")

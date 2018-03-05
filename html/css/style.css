@@ -1,5 +1,4 @@
 body {
-    background-image: url("/html/img/images.jpg");
     background-size: 70px;
     background-repeat: repeat;
 }
@@ -13,11 +12,11 @@ table {
     border-collapse: collapse;
     border: 2px solid rgb(226, 11, 101);
     width: 80%;
-    margin: auto;    
+    margin: auto;
 }
 
 td {
     /* padding: 10px; */
     border: 2px solid rgb(226, 11, 101);
-    
+
 }
